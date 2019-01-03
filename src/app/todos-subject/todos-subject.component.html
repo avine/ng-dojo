@@ -1,0 +1,9 @@
+<h2>Todos-subject</h2>
+
+<button (click)="addTodo()">Add</button>
+
+<br><br>
+
+<pre class="pre">{{ todosService.todos$ | async | json }}</pre>
+
+<pre class="pre">{{ todos | json }}</pre>

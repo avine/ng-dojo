@@ -8,6 +8,7 @@ import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { CounterComponent } from './components/counter/counter.component';
+import { TodosSubjectModule } from './todos-subject/todos-subject.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CounterComponent } from './components/counter/counter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TodosSubjectModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
